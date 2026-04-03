@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LoginServerQueue : MonoBehaviour
 {
-    // 1. Name Library
+    // Name Library
     static string[] firstNames =
     {
         "Carol","Adam","Maria","John","Leila","Chris","Taylor","Jordan","Alex",
@@ -23,7 +23,7 @@ public class LoginServerQueue : MonoBehaviour
 
     void Start()
     {
-        // 2. Create Initial Login Queue
+        // Create Initial Login Queue
         int initialPlayers = Random.Range(4, 7);
 
         for (int i = 0; i < initialPlayers; i++)
@@ -36,7 +36,7 @@ public class LoginServerQueue : MonoBehaviour
                   readableList.Count + " players in the queue: " +
                   string.Join(", ", readableList));
 
-        // 3. Start automated routines
+        // Start automated routines
         StartCoroutine(AddPlayerRoutine());
         StartCoroutine(LoginPlayerRoutine());
     }

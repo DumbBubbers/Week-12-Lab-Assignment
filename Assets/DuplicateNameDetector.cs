@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DuplicateNameDetector : MonoBehaviour
 {
-    // Reuse first-name list from Task 1
+    // Reuse first-name list from LoginServerQueue
     static string[] firstNames =
     {
         "Carol","Adam","Maria","John","Leila","Chris","Taylor","Jordan","Alex",
@@ -15,7 +15,7 @@ public class DuplicateNameDetector : MonoBehaviour
 
     void Start()
     {
-        // 1. Build the Name Array
+        // A build of the Name Array
         List<string> nameArray = new List<string>();
 
         for (int i = 0; i < 15; i++)
@@ -26,7 +26,7 @@ public class DuplicateNameDetector : MonoBehaviour
 
         Debug.Log("Created the name array: " + string.Join(", ", nameArray));
 
-        // 2. Detect Duplicates with HashSet
+        // Detect Duplicates with HashSet
         HashSet<string> seen = new HashSet<string>();
         HashSet<string> duplicates = new HashSet<string>();
 
@@ -38,7 +38,7 @@ public class DuplicateNameDetector : MonoBehaviour
             }
         }
 
-        // 3. Report Results
+        // Report Results
         if (duplicates.Count > 0)
         {
             Debug.Log("The array has duplicate names: " +
